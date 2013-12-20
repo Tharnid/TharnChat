@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+
+    <script type="text/javascript">
+    	var server = io.connect('http://localhost:1234');
+
+    	// write to the server
+    	server.emit('message', 'hi there server!!!');
+
+    	// log data to the console
+    	server.on('message', function(data) {
+    		console.log(data);
+    	});
+
+    </script>
+
+	<title>Tharnode Chat App</title>
+</head>
+
+<body>
+	
+	<div class="container">
+		Hello from the static directory!!!!
+	</div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>
